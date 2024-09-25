@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Clicker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="balance">Баланс: <span id="balance">0</span></div>
+        <div class="profit">Прибыль в час: <span id="profitPerHour">0</span></div>
+    </div>
+
+    <div class="container">
+        <!-- Контент первой вкладки (основной экран) -->
+        <div id="tab1-content" class="tab-content">
+            <div class="click-area">
+                <img src="sprite.png" alt="Click me" id="click-sprite">
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div id="progress" class="progress"></div>
+                </div>
+                <div class="level-info">
+                    Уровень: <span id="level">1</span><br>
+                    Необходимо для следующего уровня: <span id="next-level-balance">10</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Контент второй вкладки (например, магазин) -->
+        <div id="tab2-content" class="tab-content hidden">
+            <h2>Магазин</h2>
+            <p>Здесь можно купить улучшения.</p>
+        </div>
+
+        <!-- Контент третьей вкладки (например, статистика) -->
+        <div id="tab3-content" class="tab-content hidden">
+            <h2>Статистика</h2>
+            <p>Здесь можно посмотреть статистику игры.</p>
+        </div>
+    </div>
+
+    <!-- Нижняя панель с вкладками -->
+    <div class="bottom-bar">
+        <div class="line"></div>
+        <div class="tabs">
+            <button class="tab-button" data-tab="tab1">
+                <img src="tab1.png" alt="Tab 1">
+            </button>
+            <button class="tab-button" data-tab="tab2">
+                <img src="tab2.png" alt="Tab 2">
+            </button>
+            <button class="tab-button" data-tab="tab3">
+                <img src="tab3.png" alt="Tab 3">
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
